@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const userInterface = document.getElementById('user-interface');
         if (isAdmin) {
             userInterface.innerHTML = `<h2>Admin Mode</h2>`;
-            // Add admin-specific functionality
         } else {
             userInterface.innerHTML = `
                 <h2>User Mode</h2>
@@ -45,9 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function generateTickets() {
         const numberOfBoards = document.getElementById('boards').value;
-    const totalCost = numberOfBoards * 5; // Calculate based on R5.00 per board
+    const totalCost = numberOfBoards * 5; 
     document.getElementById('ticket-cost').innerText = `Ticket Cost: R${totalCost.toFixed(2)}`;
-        // Logic to generate tickets based on user input
     }
 
     renderInterface();
@@ -58,7 +56,6 @@ function simulateDraw() {
     saveToLocalStorage('lastDraw', drawNumbers);
     alert(`Draw Numbers: ${drawNumbers.join(', ')}`);
 
-    // Logic to determine winners and notify users
 }
 
 function generateRandomNumbers(count, max) {
